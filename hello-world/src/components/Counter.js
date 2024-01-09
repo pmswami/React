@@ -27,6 +27,7 @@ class Counter extends Component {
         this.increment()
         this.increment()
     }
+    
     render() { 
         return (
             <div>

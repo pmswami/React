@@ -10,12 +10,12 @@ function App() {
     <div className="App">
       <Counter/>
       {/* <Message/> */}
-      {/* <Greet name="Bruce" heroName="Batman">
+      <Greet name="Bruce" heroName="Batman">
         <p>This is children component</p>
       </Greet>
-      <Greet name="Clarke" heroName="Superman"/>
-      <Greet name="Diana" heroName="Wonder Woman"/>
-      <Welcome name="Bruce from Class"/> */}
+      {/* <Greet name="Clarke" heroName="Superman"/> */}
+      {/* <Greet name="Diana" heroName="Wonder Woman"/> */}
+      <Welcome name="Bruce from Class"/>
       {/* <Hello/> */}
     </div>
   );
