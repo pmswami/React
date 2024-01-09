@@ -23,3 +23,37 @@ Creating New Project
             installing new package
                 npm install create-react-app -g
             create-react-app hello-world
+    
+Components
+    Root(generally App Component) component contains all other components from the Application.
+    Components are re-usable and can be nested inside other components.
+    Types-
+        1. Stateless Functional Components.
+        2. Stateful Class Components.
+
+Functional Components
+    Receives properties (props)
+    Returns HTML(JSX)
+    Basically normal JS Function 
+    Named exports of components possible; then import of such components should have same name as component name
+
+Class Components
+    Can received props optionally
+    Contains internal state as well
+    return JSX
+
+Advantages of Components 
+            Functional Component                            
+        Simple Functions
+        Use Func components as much as possible
+        Absence of this keyword
+        Solution without using state
+        Stateless/Dumb/Presentational Components
+
+            Class Components
+        More feature Rich
+        Maintain their own private data - state
+        Complex UI Login
+        Provide lifecycle hooks
+        Stateful/Smart/Container
+        
