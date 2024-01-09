@@ -56,4 +56,16 @@ Advantages of Components
         Complex UI Login
         Provide lifecycle hooks
         Stateful/Smart/Container
-        
+
+JSX
+    JSX => JavaScript XML, extension to JavaScript language syntax
+    Write XML like code for elements and components
+    JSX tags have name, attributes and children
+    JSX is not a necessity to write React applications.
+    JSX makes your react code simpler and elegant.
+    JSX ultimately transpiles to pure JavaScript which is understood by the browsers.
+    JSX Differences
+        class => className
+        for => htmlFor
+        onclick => onClick
+        tabindex => tanIndex
