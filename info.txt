@@ -1,0 +1,25 @@
+React
+    Open source JS library for building UI
+    JS library, not framework
+    Rich ecosystem
+    Created and manintained by Facebook
+    Huge community
+    In-demand Skillset
+    Component Based Architecture
+    Reusable code
+    Declarative Language, not imperative Language
+    React handle efficiently updating and rendering of the components.
+    DOM updates are handled gracefully in React.
+
+Why React?
+    Seamlessly integrate Recat into any of your application.
+    Portion of your page or a completed page or even an entire application itself.
+    React native for mobile applications.
+
+Creating New Project
+    Way 1: npx
+            npx create-react-app hellow-world
+    Way 2: npm
+            installing new package
+                npm install create-react-app -g
+            create-react-app hello-world
