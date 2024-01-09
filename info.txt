@@ -69,3 +69,23 @@ JSX
         for => htmlFor
         onclick => onClick
         tabindex => tanIndex
+
+Props vs state
+        Props
+    props gets passed to the component
+    Functional parameters
+    props are immutable by children components.
+    In functional components => props
+    In Class Components =? this.props
+
+        state
+    state is managed withing the component
+    Variables declared in the function body
+    state can be changed
+    In Functional Components => useState Hook.
+    In Class Components => this.state
+    setState methods are async by default. It accept a callback function which can be executed after execution of setState completed.
+    Always make use of setState and never modify the state directly
+    Code has to be executed after the state has been updated? Place the code in the callback function which is the second argumnet to the setState method.
+    When you have to update state based on the previous state value, pass in a function as an argument instead of the regular object.
+    
