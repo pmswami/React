@@ -180,3 +180,7 @@ Lifecycle Methods (applicable only to class components)
         Two methods available
             1. static getDerivedStateFromError
             2. componentDidCatch
+
+Fragments =>
+    React Fragments lets you add elements without adding an extra node to the DOM.
+    Syntax, <React.Fragment></React.Fragment> OR <></>
