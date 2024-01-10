@@ -197,3 +197,4 @@ Pure Component =>
 If parent component does not re-render then all its children component doesnot re-render.
 PureComponents does not re-render if there is no change in states/props.
 Pure Components provide performance boost by refarining from re-rendering.
+React.memo in functional components provides same functionality as PureComponent in class based components.
