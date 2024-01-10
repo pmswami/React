@@ -184,3 +184,16 @@ Lifecycle Methods (applicable only to class components)
 Fragments =>
     React Fragments lets you add elements without adding an extra node to the DOM.
     Syntax, <React.Fragment></React.Fragment> OR <></>
+
+Regular Components =>
+    A regular component does not implement thye shouldComponentUpdate method.
+    It always returns true by default.
+
+Pure Component =>
+    A pure component on the other hand implements shouldComponentUpdate with a shallow props and state comparison.
+    Shallow comparision of primitive objects is true only when both objects have same value and are of same type.
+    Shallow copy of complex objects is true only if both objects have same location of storage.
+
+If parent component does not re-render then all its children component doesnot re-render.
+PureComponents does not re-render if there is no change in states/props.
+Pure Components provide performance boost by refarining from re-rendering.
