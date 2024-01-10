@@ -104,3 +104,12 @@ When to use index as a key?
     1. The items in the list do not have a unique id.
     2. The list is a static list and will not change.
     3. The list will never be reordered or filtered.
+
+Styling React Components
+    1. CSS Stylesheets
+    2. Inline Styling
+    3. CSS Modules
+    4. CSS in JS Libraries (Styled Components)
+
+    Styles in modules do not propogate to children of a components whereas styles from css file do propogate to children components.
+    
