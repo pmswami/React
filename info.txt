@@ -112,4 +112,49 @@ Styling React Components
     4. CSS in JS Libraries (Styled Components)
 
     Styles in modules do not propogate to children of a components whereas styles from css file do propogate to children components.
-    
+
+Controlled Components
+
+Lifecycle Methods (applicable only to class components)
+    Phase 1 => Mounting
+        When an instance of a component is being created and inserted into the DOM.
+        Four methods available =>
+            1. constructor => 
+                A special function that will get called whenever a new component is created
+                Used to -
+                    Initialize states.
+                    Bindinmg the event Handlers.
+                Do not cause side effects for eg.,HTTP requests
+                Always call super(props)
+                Directly overwrite this.state
+            2. static getDerivedStateFromProps =>
+                When the state of the component depends on changes in props over time
+                Rarely used lifecycle method
+                Since static method, does not have access to this keyword
+                Do not cause side effects for eg., HTTP requests
+            3. render =>
+                Only required method
+                Read props and state and return JSX
+                Do not change state or interact with DOM or make AJAX calls.
+                Children component lifecycle methods are also executed.
+            4. componentDidMount =>
+                Invoked immediately after a component and all its children components have been rendered to the DOM.
+                Cause side effects. Ex., Interact with the DOM or perform any AJAX calls to the load data.
+    Phase 2 => Updating
+        When component is being re-rendered as a result of changes to either its props or state
+        Five method available =>
+            1. static getDerivedStateFromProps
+            2. ShouldComponentUpdate
+            3. render
+            4. getSnapshotBeforeUpdate
+            5. componentDidMount
+    Phase 3 => Unmounting
+        When is being removed from the DOM
+        One method available =>
+            1. componentWillUnmount
+    Phase 4 => Error Handling
+        When there is an error during rendering, in a lifecycle method,
+        or in the constructor of any child components.
+        Two methods available
+            1. static getDerivedStateFromError
+            2. componentDidCatch
