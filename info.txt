@@ -79,9 +79,9 @@ Props vs state
     In Class Components =? this.props
 
         state
-    state is managed withing the component
+    State is managed withing the component
     Variables declared in the function body
-    state can be changed
+    State can be changed
     In Functional Components => useState Hook.
     In Class Components => this.state
     setState methods are async by default. It accept a callback function which can be executed after execution of setState completed.
@@ -94,3 +94,13 @@ Conditional Rendering
     2. Element Variables.
     3. Ternary Conditional Operator.
     4. Short Circuit Operator.
+
+prop "key" is unique and reserved. It cannot be accessed withing child components.
+React uses key to match list elements within new list and old list.
+If keys are passed then React updates the list the efficiently, otherwise React performance decreases.
+Generally index of element of list is used as keys. But you can use any other parameter which is unique.
+
+When to use index as a key?
+    1. The items in the list do not have a unique id.
+    2. The list is a static list and will not change.
+    3. The list will never be reordered or filtered.
