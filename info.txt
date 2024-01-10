@@ -143,15 +143,37 @@ Lifecycle Methods (applicable only to class components)
     Phase 2 => Updating
         When component is being re-rendered as a result of changes to either its props or state
         Five method available =>
-            1. static getDerivedStateFromProps
-            2. ShouldComponentUpdate
-            3. render
-            4. getSnapshotBeforeUpdate
-            5. componentDidMount
+            1. static getDerivedStateFromProps =>
+                Method is called every time a component is re-rendered.
+                Set the state.
+                Do not cause side effects. for eg., HTTP requests.
+                Rarely used method in updating phase.
+            2. ShouldComponentUpdate =>
+                By default, all component will re-render after props/state changes.
+                Can return false to prevent updating.
+                Dictates if the component should re-render or not.
+                Performance Optimization.
+                Do not cause side effects. For eg., HTTP requests, calling the setState method.
+            3. render =>
+                Only required method
+                Read props and state and return JSX.
+                Do not change state or interact with DOM or make AJAX calls.
+            4. getSnapshotBeforeUpdate =>
+                Called right before the changes from the virtual DOM. are to be reflected in the DOM.
+                Capture some information from the DOM.
+                Method will either return null or return a value. Returned value will be passed as third parameter to the next method.
+            5. componentDidUpdate =>
+                Called after the render is finished in the re-render cycles.
+                Cuase side-effects. 
+                Make AJAX calls.
     Phase 3 => Unmounting
         When is being removed from the DOM
         One method available =>
-            1. componentWillUnmount
+            1. componentWillUnmount => 
+                Method is invoked immediately before a component is unmounted and destroyed.
+                Cancelling any network requests, removing event handlers, cancelling any subscriptions and also invalidating timers.
+                Do not call the setState method.
+                Perform necessary cleanup in here
     Phase 4 => Error Handling
         When there is an error during rendering, in a lifecycle method,
         or in the constructor of any child components.
