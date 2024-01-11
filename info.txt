@@ -201,3 +201,6 @@ React.memo in functional components provides same functionality as PureComponent
 
 React Refs =>
     Allows us to create a reference to underlying DOM elements.
+    Refs cannot be attached to fucntional components.
+    Refs can only be attached to class components.
+    Refs can be passed to parent components.
