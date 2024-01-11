@@ -23,13 +23,15 @@ import RegCompt from './components/RegComp';
 import ParentComp from './components/ParentComp';
 import RefsDemo from './components/RefsDemo';
 import Input from './components/Input';
-import FocusInput from './components/FocusInput';
+// import FocusInput from './components/FocusInput';
+import FRParentInput from './components/FRParentInput';
 
 
 function App() {
   return (
     <div className="App">
-      <FocusInput/>
+      <FRParentInput/>
+      {/* <FocusInput/> */}
       {/* <Input/> */}
       {/* <RefsDemo/> */}
       {/* <ParentComp/> */}
