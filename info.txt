@@ -243,4 +243,12 @@ Rules of Hook
     Only call Hooks at the Top level, DOnt call Hooks inside loops, conditions or nested functions.
     Only call Hooks from React Functions, Call them from withing React functional components and not just any regular JavaScript function.
     In useState hook, while updating objects in useState hook, setter function do not copy remaining fields as it is, it only sets updated field and removes all other. In class based state variables, setters will udate all others including updating field.
+
+    useState =>
+        It lets you add state to functional components.
+        In classes, the state is always an object.
+        With the useState Hook, the state doesnt have to be an object.
+        The useState hook returns an array with 2 elements. The first element is the current value of the state and second element is a state setter function.
+        New State value depends on the previous state value? You can pass a function to the setter function.
+        When dealing with bonbjects or arrays, always make sure to spread your state variable and then call the setter function.
     
