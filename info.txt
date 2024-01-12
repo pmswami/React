@@ -204,3 +204,8 @@ React Refs =>
     Refs cannot be attached to fucntional components.
     Refs can only be attached to class components.
     Refs can be passed to parent components.
+
+Portals =>
+    Used to create a components which are not part to root element.
+    Whenever an event is created inside a portal, event-bbubling is supported, they can be catched withing their parent element/component.
+    
