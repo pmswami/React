@@ -208,4 +208,13 @@ React Refs =>
 Portals =>
     Used to create a components which are not part to root element.
     Whenever an event is created inside a portal, event-bbubling is supported, they can be catched withing their parent element/component.
-    
+
+Error Boundary
+    A class component that implements either one or both of the lifecycle methods getDerivedStateFromError or componentDidCatch becomes an error boundary.
+    The static getDerivedStateFromError method is used to render a fallback UI after an error is thrown.
+    The componentDidCatch method is used to log the error information. In development enviroment, by default, React logs each and every error to console. But this might be useful only production enviroments.
+    Error boundaries catch errors in, component rendering/updation, lifecycle methods, in constructors only. However, errors inside event handlers are not being caught by these error boundary. They can be only handled using traditional try-catch method.
+    Error boundaries are React components that catch JavaScript erro in their child components tree, log those error and display a fall-back UI.
+    A class component becomes an Error Boundary by defining either or both of getDerivedStateFromError and componentDidCatch lifecycle methods.
+    The placement of the Error Boundary also matters as it controls if the entire app should have the fall-back UI or just the component causing the problem.
+    Provide a way to gracefully handle error in application code.
