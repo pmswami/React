@@ -228,3 +228,13 @@ Context =>
     Context Provides a way to pass the datat through the component tree without having to pass props down manually at entry level.
     It contain, Context Provider and Context Consumer. Context Provider provides the context with values. Context consumer uses the value whenever required.
     If context provider is not defined then context consumer uses default value of the context. This default value can be defined while creating the context.
+
+Hooks =>
+    Works only on functions
+    Dont work inside Classes.
+    Allows to use React feature without class.
+    Allows re-use of stateful logic.
+    
+Why Hooks ?
+    No need of classes
+    Easier to share code logics between components.
