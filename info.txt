@@ -218,3 +218,8 @@ Error Boundary
     A class component becomes an Error Boundary by defining either or both of getDerivedStateFromError and componentDidCatch lifecycle methods.
     The placement of the Error Boundary also matters as it controls if the entire app should have the fall-back UI or just the component causing the problem.
     Provide a way to gracefully handle error in application code.
+
+Higher Order Components=>
+    To share common functionality between different components without duplicating the code.
+    A pattern where a function takes a component as an argument and returns a new component.
+    Similar to Higher order functions in Python.
