@@ -34,12 +34,15 @@ import ClickCounter2 from './components/ClickCounter2';
 import HoverCounter2 from './components/HoverCounter2';
 import Counter2 from './components/Counter2';
 import ComponentC from './components/ComponentC';
-import { UserProvider } from './components/userContext';
+import UserContext, { UserProvider } from './components/userContext';
 
 
 function App() {
   return (
     <div className="App">
+      {/* <UserContext>
+        <ComponentC/>
+      </UserContext> */}
       <UserProvider value="SwamFire">
         <ComponentC />
       </UserProvider>
