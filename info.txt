@@ -251,4 +251,8 @@ Rules of Hook
         The useState hook returns an array with 2 elements. The first element is the current value of the state and second element is a state setter function.
         New State value depends on the previous state value? You can pass a function to the setter function.
         When dealing with bonbjects or arrays, always make sure to spread your state variable and then call the setter function.
-    
+    useEffect =>
+        The useEffect Hook lets you perform side effects in a fucntional components.
+        It is close replacement for componentDidMount, componentDidUpdate, componentWillUnmount lifecycle methods.
+        useEffect takes array as second argument, this is list of variables on which we want to re-render the component.
+        
