@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
 function HookMouse() {
-    const [x, setX] = useState()
-    const [y, setY] = useState()
+    const [x, setX] = useState(0)
+    const [y, setY] = useState(0)
 
     const logMousePosition = (e)=>{
         console.log("Mouse Event")
@@ -13,6 +13,10 @@ function HookMouse() {
     useEffect(()=>{
         console.log("useEffect called")
         window.addEventListener("mousemove", logMousePosition)
+        return ()=>{
+            console.log("Component unmounting code")
+            window.removeEventListener("mousemove", logMousePosition)
+        }
     }, [])
   return (
     <div>
