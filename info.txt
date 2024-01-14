@@ -255,4 +255,5 @@ Rules of Hook
         The useEffect Hook lets you perform side effects in a fucntional components.
         It is close replacement for componentDidMount, componentDidUpdate, componentWillUnmount lifecycle methods.
         useEffect takes array as second argument, this is list of variables on which we want to re-render the component.
+        If we pass [] as second argument to useEffect, then it re-renders the component only once. If we dont pass second argument, then it by default, re-renders every time component is updated.
         
