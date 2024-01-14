@@ -81,6 +81,46 @@
 // export default DataFetching
 
 
+// // Data Fetching based on id of Post
+// import React, { useEffect, useState } from 'react'
+// import axios from "axios"
+
+// function DataFetching() {
+    
+//     const [posts, setPosts] = useState([])
+//     const [id, setId] = useState(1)
+//     // "https://jsonplaceholder.typicode.com/posts"
+//     useEffect(()=>{
+//         console.log(id)
+//         if(id)
+//         {
+//             axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+//             .then((response)=>{
+//                 console.log(response)
+//                 return setPosts([response.data])
+//             })
+//             .catch((error)=>{
+//                 console.log(error)
+//             })
+//         }
+//     },[id])
+//   return (
+//     <div>
+//         <ul>
+//             <input type="text" onChange={e=>setId(e.target.value)} value={id}/>
+//             {posts.map((post)=>{
+//                 return <li key={post.id}>{post.title}</li>
+//             })}
+//         </ul>
+//     </div>
+//   )
+// }
+
+// export default DataFetching
+
+
+
+// Data Fetching based on id of Post
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 
@@ -88,12 +128,13 @@ function DataFetching() {
     
     const [posts, setPosts] = useState([])
     const [id, setId] = useState(1)
-    // "https://jsonplaceholder.typicode.com/posts"
+    const [idFromButtonClick, setIdFromButtonClick] = useState(id)
+
     useEffect(()=>{
         console.log(id)
-        if(id)
+        if(idFromButtonClick)
         {
-            axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            axios.get(`https://jsonplaceholder.typicode.com/posts/${idFromButtonClick}`)
             .then((response)=>{
                 console.log(response)
                 return setPosts([response.data])
@@ -102,11 +143,17 @@ function DataFetching() {
                 console.log(error)
             })
         }
-    },[id])
+    },[idFromButtonClick])
+
+    const handleClick=()=>{
+        setIdFromButtonClick(id)
+    }
+
   return (
     <div>
         <ul>
             <input type="text" onChange={e=>setId(e.target.value)} value={id}/>
+            <button type='button' onClick={handleClick}>Fetch Post</button>
             {posts.map((post)=>{
                 return <li key={post.id}>{post.title}</li>
             })}
