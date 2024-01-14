@@ -258,3 +258,6 @@ Rules of Hook
         If we pass [] as second argument to useEffect, then it re-renders the component only once. If we dont pass second argument, then it by default, re-renders every time component is updated.
         For cleanup code, useEffect can return a function which can be used to run these cleanup codes.
         Always try to declare dependencies inside useEffect only. This will remove the common error/mistake.
+    useContext =>
+        Context provides a way to pass data through the components tree without having to pass props down manually at entry level.
+        
