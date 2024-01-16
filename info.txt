@@ -265,4 +265,4 @@ Rules of Hook
         It is an alternative to useState.
         Returns [newState, dispatch]
         useReducer uses reducer functions.
-        
+        If returning state is object, then remember to use spread operator before updating values.
