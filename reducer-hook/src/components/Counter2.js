@@ -22,7 +22,7 @@ const reducer = (state, action)=>{
     }
 }
 
-function Counter() {
+function Counter2() {
     const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div>
@@ -43,4 +43,4 @@ function Counter() {
   )
 }
 
-export default Counter
+export default Counter2
