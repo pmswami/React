@@ -6,6 +6,8 @@ import ComponentA from './components/ComponentA';
 import ComponentB from './components/ComponentB';
 import ComponentC from './components/ComponentC';
 import { createContext, useReducer } from 'react';
+import DataFetching1 from './components/DataFetching1';
+import DataFetching2 from './components/DataFetching2';
 
 const initialState = 0
 const reducer = (state, action)=>{
@@ -24,20 +26,32 @@ switch(action){
 
 export const CountContext = createContext()
 
+// function App() {
+//   const [count, dispatch] = useReducer(reducer, initialState)
+//   return (
+//     <CountContext.Provider value={{countState: count, countDispatch: dispatch}}>
+//       <div className="App">
+//         <div>Count = {count}</div>
+//         <ComponentA/>
+//         <ComponentB/>
+//         <ComponentC/>
+//         {/* <Counter3/> */}
+//         {/* <Counter2/> */}
+//         {/* <Counter/> */}
+//       </div>
+//     </CountContext.Provider>
+//   );
+// }
+
+// export default App;
+
+
 function App() {
-  const [count, dispatch] = useReducer(reducer, initialState)
   return (
-    <CountContext.Provider value={{countState: count, countDispatch: dispatch}}>
       <div className="App">
-        <div>Count = {count}</div>
-        <ComponentA/>
-        <ComponentB/>
-        <ComponentC/>
-        {/* <Counter3/> */}
-        {/* <Counter2/> */}
-        {/* <Counter/> */}
+        <DataFetching2/>
+        {/* <DataFetching1/> */}
       </div>
-    </CountContext.Provider>
   );
 }
 

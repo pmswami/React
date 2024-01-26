@@ -260,9 +260,25 @@ Rules of Hook
         Always try to declare dependencies inside useEffect only. This will remove the common error/mistake.
     useContext =>
         Context provides a way to pass data through the components tree without having to pass props down manually at entry level.
-    userReducer =>
+    useReducer =>
         useReducer is a hook that is used for state management.
         It is an alternative to useState.
         Returns [newState, dispatch]
         useReducer uses reducer functions.
         If returning state is object, then remember to use spread operator before updating values.
+    useState vs useReducer =>
+        1. Type of State
+            Number, String, Boolean => useState
+            Object or Array => useReducer
+        2. Number of state transitions
+            one or two => useState
+            too many => useReducer
+        3. Related state transitions ?
+            No => useState
+            Yes => useReducer
+        4. Business Logic 
+            No Busiiness Logic => useState
+            Complex Business Logic => useReducer
+        5. Local or Global 
+            local => useState
+            global => useReducer
