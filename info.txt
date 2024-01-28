@@ -282,3 +282,7 @@ Rules of Hook
         5. Local or Global 
             local => useState
             global => useReducer
+    useCallback =>
+        useCallback is a hook that will return a memoized version of the callback function that only changes if one of the dependencies has changed.
+        It is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.
+        Used for performance improvement.
