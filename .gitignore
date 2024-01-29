@@ -5,3 +5,4 @@
 /reducer-hook/node_modules/*
 /node_modules/*
 /callback-hook/node_modules/*
+/memo-hook/node_modules/*

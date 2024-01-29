@@ -286,3 +286,9 @@ Rules of Hook
         useCallback is a hook that will return a memoized version of the callback function that only changes if one of the dependencies has changed.
         It is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.
         Used for performance improvement.
+    useMemo =>
+        The React useMemo Hook returns a memoized value.
+        The useMemo Hook only runs when one of its dependencies update.
+        This can improve performance.
+        The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+        
