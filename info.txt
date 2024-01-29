@@ -291,4 +291,7 @@ Rules of Hook
         The useMemo Hook only runs when one of its dependencies update.
         This can improve performance.
         The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+    useRef =>
+        It’s particularly common to use a ref to manipulate the DOM. React has built-in support for this.
+        useRef is a React Hook that lets you reference a value that’s not needed for rendering.
         
