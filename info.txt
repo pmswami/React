@@ -294,4 +294,9 @@ Rules of Hook
     useRef =>
         It’s particularly common to use a ref to manipulate the DOM. React has built-in support for this.
         useRef is a React Hook that lets you reference a value that’s not needed for rendering.
-        
+Custom Hooks =>
+    A custom hook is basically a JavaScript function whose name starts with "use".
+    A custom hook can also call other Hooks if required.
+
+    Why ?
+        Share Logic - Alternative to HOCs and Render Props

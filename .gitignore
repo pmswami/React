@@ -7,3 +7,4 @@
 /callback-hook/node_modules/*
 /memo-hook/node_modules/*
 /ref-hook/node_modules/*
+/custom-hook/node_modules/*
