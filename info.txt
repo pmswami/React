@@ -297,6 +297,7 @@ Rules of Hook
 Custom Hooks =>
     A custom hook is basically a JavaScript function whose name starts with "use".
     A custom hook can also call other Hooks if required.
+    A custom hook always start with word "use"
 
     Why ?
         Share Logic - Alternative to HOCs and Render Props
