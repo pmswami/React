@@ -302,5 +302,13 @@ Custom Hooks =>
     Why ?
         Share Logic - Alternative to HOCs and Render Props
 
-While re-rendering, if there is no change in elements of React then it will not be updated.
-Controlling re-rendering of components helps to increase performance of application.
+React-Render = >
+    While re-rendering, if there is no change in elements of React then it will not be updated.
+    Controlling re-rendering of components helps to increase performance of application.
+
+    useState and Render => 
+        The setter function from a useState hook will cause the component to re-render.
+        The exception is when you update a State Hook to the same value as current state.
+        Same value after initial render ? The component will not re-render.
+        Same value after re-renders? React will render that specific component one more time and then bails out from any subsequent renders.
+        
