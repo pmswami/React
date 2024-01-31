@@ -301,3 +301,6 @@ Custom Hooks =>
 
     Why ?
         Share Logic - Alternative to HOCs and Render Props
+
+While re-rendering, if there is no change in elements of React then it will not be updated.
+Controlling re-rendering of components helps to increase performance of application.
