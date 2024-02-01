@@ -312,3 +312,13 @@ React-Render = >
         Same value after initial render ? The component will not re-render.
         Same value after re-renders? React will render that specific component one more time and then bails out from any subsequent renders.
         
+    useReducer and render =>
+        The dispatch function from a useReducer hook will cause the component to re-render.
+        The exception is when you update the state to the same value as the current state.
+        Same value after initial render? The componennt will not re-render.
+        Same value after re-render> React will render that specific component one more time and then bails out from any subsequent renders.
+    
+    State Immutability and render =>
+        Mutating object or an array as state will not cause a re-render when used with useState or useReducer hook.
+        To re-render, make a copy of existing state, modify as necessary and then pass the new state to the setter function or while returning from a reducer function.
+        Directly mutating the state is an easy way to create bugs in your application. Make sure you dont do that.
