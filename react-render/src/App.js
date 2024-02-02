@@ -1,5 +1,6 @@
 
 import './App.css';
+import { ContextParent } from './components/Context/ContextParent';
 import { ArrayUseState } from './components/Immutable State/ArrayUseState';
 import { ObjectUseState } from './components/Immutable State/ObjectUseState';
 import { Parent3 } from './components/Incorrect Optimizations/Parent3';
@@ -27,7 +28,8 @@ function App() {
       {/* <GrandParent/> */}
       {/* <Parent2/> */}
       {/* <Parent3/> */}
-      <Parent4/>
+      {/* <Parent4/> */}
+      <ContextParent/>
     </div>
   );
 }

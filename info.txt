@@ -339,6 +339,10 @@ React-Render = >
         To optimize this behaviour, you can use React.memo and pass in the child component.
         React.memo will perform shallow comparisonof the previuous and new props and re-render the child compoennt only if props have changed.
 
+    Context and render =>
+        When the context provider is in the parent component and parent component's state updates, every child component re-renders and not just thye component consuming the context value.
+        To avoid this re-rendering, wrap the Parent component with React.memo This will check whetehr component has changed before re-rendering by comparing with previous value of the component.
+
     FAQs =>
         1. When do I use the same element reference technique and when do I use React.memo ?
             Same Element Reference =>
@@ -354,5 +358,12 @@ React-Render = >
             Shallow comparisons arent free. They are O(prop count). And they only buy something if it bails out.
             All comparisons where we end up re-rendering are wasted. Why would you expect always comparing to be faster? COnsidering many components always get different props.
             When you optimize the rendering of one compoennt, React will also skip rendering that components entire subtree because its effectively stopping the default "render children recursively" behaviour of React.
+    
     In React, if children has its own components then React will re-render all of its child components even after using React.memo. This is because, each children component(having JSx or component, no re-render if children is simple primitive datatype value) is always a new reference.
     // Every render of parent component, React will create new person object. Hence the child component will also re-render because of change in props.
+
+    Ways to cause a re-render =>
+        1. Component calls useState setter function or useReducer dispatch function.
+        2. If parent component re-renders.
+        3. React context
+    
