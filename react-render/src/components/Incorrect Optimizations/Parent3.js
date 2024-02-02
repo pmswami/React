@@ -1,5 +1,6 @@
 import React, { Children, useState } from 'react'
 import { MemoizedChild3 } from './Child3'
+import { MemoizedChild4 } from './Child4'
 
 export const Parent3 = () => {
     const [count, setCount] = useState(0)
@@ -17,7 +18,8 @@ export const Parent3 = () => {
 
         {/* <Child1/> */}
         {/* {children} */}
-        <MemoizedChild3 name={name}><strong>Hello</strong></MemoizedChild3>
+        {/* <MemoizedChild3 name={name}><strong>Hello</strong></MemoizedChild3> */}
+        <MemoizedChild4 name={name}></MemoizedChild4>
     </div>
   )
 }
