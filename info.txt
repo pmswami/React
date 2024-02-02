@@ -329,8 +329,8 @@ React-Render = >
         New state same as old state after re-renders ? Parent re-renders one more time but child never re-renders.
 
     Same Element Reference =>
-        In React, whena parent component renders, React will recursively render all of its child components.
-        "Unnecessary renders" where the child components goes through rernder phase but not the commit phase.
+        In React, when a parent component renders, React will recursively render all of its child components.
+        "Unnecessary renders" where the child components goes through render phase but not the commit phase.
         You can extract the expensive child component and instead pass it down as props to the parent component.
         Whenever there is a re-render caused by a change in state of the parent component, React will optimize the re-render for you by knowing that props has to be referencing the same element before and after the render.
 
@@ -338,4 +338,20 @@ React-Render = >
         In React, when a parent component renders, a child component might un-necessarily re-render.
         To optimize this behaviour, you can use React.memo and pass in the child component.
         React.memo will perform shallow comparisonof the previuous and new props and re-render the child compoennt only if props have changed.
-        
+
+    FAQs =>
+        1. When do I use the same element reference technique and when do I use React.memo ?
+            Same Element Reference =>
+                1. When your parent component re-renders because of the state changes in parent component.
+                2. This technique does not work if the parent component re-renders because of changes in its props.
+                3. state change? => Yes to use
+                    props change? => No to use.
+            React.memo =>
+                1. When your child is being asked to re-render due to changes in the parents state which do not affect the child components props in anyway.
+        2. If React.memo provides the optimization by comparing the props, why not wrap every single component with React.memo ?
+                OR
+            Why doesnt React just internally memoize every component and do not expose React.memo to developers ?
+            Shallow comparisons arent free. They are O(prop count). And they only buy something if it bails out.
+            All comparisons where we end up re-rendering are wasted. Why would you expect always comparing to be faster? COnsidering many components always get different props.
+            When you optimize the rendering of one compoennt, React will also skip rendering that components entire subtree because its effectively stopping the default "render children recursively" behaviour of React.
+            
