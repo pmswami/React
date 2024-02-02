@@ -355,3 +355,4 @@ React-Render = >
             All comparisons where we end up re-rendering are wasted. Why would you expect always comparing to be faster? COnsidering many components always get different props.
             When you optimize the rendering of one compoennt, React will also skip rendering that components entire subtree because its effectively stopping the default "render children recursively" behaviour of React.
     In React, if children has its own components then React will re-render all of its child components even after using React.memo. This is because, each children component(having JSx or component, no re-render if children is simple primitive datatype value) is always a new reference.
+    // Every render of parent component, React will create new person object. Hence the child component will also re-render because of change in props.

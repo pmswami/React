@@ -3,6 +3,7 @@ import './App.css';
 import { ArrayUseState } from './components/Immutable State/ArrayUseState';
 import { ObjectUseState } from './components/Immutable State/ObjectUseState';
 import { Parent3 } from './components/Incorrect Optimizations/Parent3';
+import { Parent4 } from './components/Incorrect Optimizations/Parent4';
 // import { Child1 } from './components/Optimization/Child1';
 import { GrandParent } from './components/Optimization/GrandParent';
 import { Parent2 } from './components/Optimization/Parent2';
@@ -25,7 +26,8 @@ function App() {
       </Parent1> */}
       {/* <GrandParent/> */}
       {/* <Parent2/> */}
-      <Parent3/>
+      {/* <Parent3/> */}
+      <Parent4/>
     </div>
   );
 }
