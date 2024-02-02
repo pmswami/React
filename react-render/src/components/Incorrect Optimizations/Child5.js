@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Child5 = ({name, person, handleClick}) => {
+export const Child5 = ({name, person={fname:"",lname:""}, handleClick}) => {
     console.log("Child5 rendering")
   return (
     <div>{name} {person.fname} {person.lname}</div>
