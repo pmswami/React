@@ -354,4 +354,4 @@ React-Render = >
             Shallow comparisons arent free. They are O(prop count). And they only buy something if it bails out.
             All comparisons where we end up re-rendering are wasted. Why would you expect always comparing to be faster? COnsidering many components always get different props.
             When you optimize the rendering of one compoennt, React will also skip rendering that components entire subtree because its effectively stopping the default "render children recursively" behaviour of React.
-            
+    In React, if children has its own components then React will re-render all of its child components even after using React.memo. This is because, each children component(having JSx or component, no re-render if children is simple primitive datatype value) is always a new reference.
