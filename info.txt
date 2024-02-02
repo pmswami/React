@@ -334,4 +334,8 @@ React-Render = >
         You can extract the expensive child component and instead pass it down as props to the parent component.
         Whenever there is a re-render caused by a change in state of the parent component, React will optimize the re-render for you by knowing that props has to be referencing the same element before and after the render.
 
-    
+    React.memo and render =>
+        In React, when a parent component renders, a child component might un-necessarily re-render.
+        To optimize this behaviour, you can use React.memo and pass in the child component.
+        React.memo will perform shallow comparisonof the previuous and new props and re-render the child compoennt only if props have changed.
+        
