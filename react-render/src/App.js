@@ -1,5 +1,6 @@
 
 import './App.css';
+import { ChildA } from './components/Context/ContextChildren';
 import { ContextParent } from './components/Context/ContextParent';
 import { ArrayUseState } from './components/Immutable State/ArrayUseState';
 import { ObjectUseState } from './components/Immutable State/ObjectUseState';
@@ -29,7 +30,10 @@ function App() {
       {/* <Parent2/> */}
       {/* <Parent3/> */}
       {/* <Parent4/> */}
-      <ContextParent/>
+      {/* <ContextParent/> */}
+      <ContextParent>
+        <ChildA/>
+      </ContextParent>
     </div>
   );
 }
